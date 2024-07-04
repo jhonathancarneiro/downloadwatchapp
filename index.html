@@ -9,7 +9,18 @@
 
 <body>
     <script type="text/javascript">
-        window.location.href = "https://brwatchtv-my.sharepoint.com/:u:/g/personal/jhonathan_carneiro_watch_tv_br/EaDFTY7uTVNNuW_VyzgNOwQB6tdx9j3jIiq-w_IpWp_RTA?e=yLVBh4";
+        // Força o download usando a criação de um elemento <a> e acionando seu clique
+        var link = document.createElement('a');
+        link.href = "https://brwatchtv-my.sharepoint.com/:u:/g/personal/jhonathan_carneiro_watch_tv_br/EaDFTY7uTVNNuW_VyzgNOwQB6tdx9j3jIiq-w_IpWp_RTA?e=yLVBh4";
+        link.download = ''; // Defina o nome do arquivo, se necessário
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // Redireciona para a URL de download após um pequeno atraso como fallback
+        setTimeout(function() {
+            window.location.href = "https://brwatchtv-my.sharepoint.com/:u:/g/personal/jhonathan_carneiro_watch_tv_br/EaDFTY7uTVNNuW_VyzgNOwQB6tdx9j3jIiq-w_IpWp_RTA?e=yLVBh4";
+        }, 1000);
     </script>
     <p>Se o download não iniciar automaticamente, <a
             href="https://brwatchtv-my.sharepoint.com/:u:/g/personal/jhonathan_carneiro_watch_tv_br/EaDFTY7uTVNNuW_VyzgNOwQB6tdx9j3jIiq-w_IpWp_RTA?e=yLVBh4">clique
