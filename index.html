@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download APK</title>
- <style>
+    <style>
         body {
             background-color: #1e1e22;
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
-            
+
         }
     </style>
 </head>
@@ -27,19 +27,28 @@
         document.body.removeChild(link);
 
         // Redireciona para a URL de download após um pequeno atraso como fallback
-        setTimeout(function() {
+        setTimeout(function () {
             window.location.href = "app-watch-teste.apk"; // Substitua por nome do arquivo APK
         }, 1000);
     </script>
-     <img src="logo-watch.svg" alt="Description of the image" />
-    <p>Se o download não iniciar automaticamente,</p><br> <a style="margin-top: 2rem;
+    <div
+        style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 20%; padding: 20px;">
+        <img src="logo-watch.svg" alt="Description of the image" style="width: 50%;" />
+        <p>Se o download não iniciar automaticamente, clique no botão para baiaxar</p>
+        <button style="margin-top: 2rem;
         font-weight: 700;
-        width: 11.625rem;
+        max-width: 70%;
         border-radius: 1rem;
         padding: 0.8rem;
         height: 50px;
-        width: 100px; " href=" app-watch-teste.apk">clique
-        aqui para baixar</a></p>
+        text-decoration: none;
+        color: white;
+        background-color: #e96744;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        " onclick="window.location.href='app-watch-teste.apk'">clique para baixar</button>
+    </div>
 </body>
 
 </html>
